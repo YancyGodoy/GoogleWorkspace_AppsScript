@@ -2,7 +2,7 @@
 This requires the usage of the Admin SDK API > Reports Advanced Service, it has to be enabled first following steps at:
 https://developers.google.com/apps-script/guides/services/advanced#enable_advanced_services
 
-This is based off of an idea from @FernandoLara
+This is based off of an idea from @felarap
 */
 
 function listUsers() {
