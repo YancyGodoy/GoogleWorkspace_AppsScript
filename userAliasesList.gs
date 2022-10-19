@@ -18,7 +18,7 @@ in the console log section they are inserted into a Google Sheet for better mana
 //This will add a menu/submenu to the Google Sheets files for the script to be executed easily
 function onOpen(e) {
   let subMenu = [{ name: "Get List", functionName: "listUsersWithEmailAliases" }];
-  SpreadsheetApp.getActiveSpreadsheet().addMenu("Get Enail Aliases", subMenu);
+  SpreadsheetApp.getActiveSpreadsheet().addMenu("Get Email Aliases", subMenu);
 }
 
 function listUsersWithEmailAliases() {
