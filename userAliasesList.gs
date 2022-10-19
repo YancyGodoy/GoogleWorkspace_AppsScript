@@ -15,13 +15,13 @@ in the console log section they are inserted into a Google Sheet for better mana
  * @license MIT
  */
 
+//This will add a menu/submenu to the Google Sheets files for the script to be executed easily
 function onOpen(e) {
   let subMenu = [{ name: "Get List", functionName: "listUsersWithEmailAliases" }];
   SpreadsheetApp.getActiveSpreadsheet().addMenu("Get Enail Aliases", subMenu);
 }
 
 function listUsersWithEmailAliases() {
-
   //Sheets Prep
   let userCol = 1, primaryCol = 2, aliasCol = 3;
   let pageToken, page;
@@ -51,7 +51,7 @@ function listUsersWithEmailAliases() {
       for (let i = 0; i < users.length; i++) {
         const user = users[i]
         if (user.aliases && user.aliases.length > 0) {
-          //Inserting data into Google Sheets
+  //Inserting data into Google Sheets
           sheet.getRange(activeRow, userCol).setValue(user.name.fullName);
           sheet.getRange(activeRow, primaryCol).setValue(user.primaryEmail);
           sheet.getRange(activeRow, aliasCol).setValue(JSON.stringify(user.aliases));
